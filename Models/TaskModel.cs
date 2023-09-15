@@ -13,9 +13,10 @@ public class TaskInserted : AbstractModel,ITaskInserted
 
     public Priority PriorityTask { get; set; }
 
-    public virtual Categoria Category { get; set; }
+    [JsonIgnore]
+    public virtual Categoria? Category { get; set; }=null;
 
-    public string Resumen { get; set; }
+    public string? Resumen { get; set; }=null;
 }
 
 public enum Priority{

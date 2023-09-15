@@ -21,9 +21,23 @@ public class TaskController: ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post([FromBody] ITaskInserted task)
+    public async Task<IActionResult> Post([FromBody] TaskInserted task)
     {   
-        await taskService.Save((TaskInserted) task);
+        await taskService.Save(task);
+        return Ok();
+    }
+
+    [HttpPatch("{id}")]
+    public async Task<IActionResult> Patch(Guid id, TaskInserted task)
+    {
+        await taskService.Update(id,task);
+        return Ok();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        await taskService.Delete(id);
         return Ok();
     }
 }
