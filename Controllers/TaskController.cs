@@ -8,8 +8,8 @@ namespace firstApiNet.Controllers;
 [Route("api/task")]
 public class TaskController: ControllerBase
 {
-    TaskService taskService;
-    public TaskController(TaskService service)
+    ITaskService taskService;
+    public TaskController(ITaskService service)
     {
         taskService = service;
     }
