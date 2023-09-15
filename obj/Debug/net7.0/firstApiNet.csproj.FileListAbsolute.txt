@@ -37,3 +37,5 @@ C:\Users\auxsistemas3\Desktop\firstApiNet\bin\Debug\net7.0\Microsoft.EntityFrame
 C:\Users\auxsistemas3\Desktop\firstApiNet\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\auxsistemas3\Desktop\firstApiNet\bin\Debug\net7.0\Npgsql.dll
 C:\Users\auxsistemas3\Desktop\firstApiNet\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\auxsistemas3\Desktop\firstApiNet\bin\Debug\net7.0\Humanizer.dll
+C:\Users\auxsistemas3\Desktop\firstApiNet\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll

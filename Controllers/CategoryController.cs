@@ -21,23 +21,18 @@ public class CategoryController: ControllerBase
     }
 
     [HttpPost]
-    public IActionResult Post([FromBody] ICategory categoria){
-        if(categoria is null)
-        {
-            throw new ArgumentNullException(nameof(categoria));
-        }
-        categoryService.Save((Categoria) categoria);
-        return Ok();
-        
+    public async Task<IActionResult> Post([FromBody] Categoria categoria){
+        await categoryService.Save(categoria);
+        return Ok();   
     }
 
     [HttpPatch("{id}")]
-    public IActionResult Put(Guid id,[FromBody] Categoria categoria){
-        if(categoria is null)
+    public async Task<IActionResult> Patch(Guid id,[FromBody] Categoria categoria){
+        if(id.ToString() is null)
         {
-            throw new ArgumentNullException(nameof(categoria));
+            throw new ArgumentNullException(nameof(id));
         }
-        categoryService.Update(id,categoria);
+        await categoryService.Update(id,categoria);
         return Ok();
     }
 
